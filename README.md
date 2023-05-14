@@ -11,7 +11,7 @@ The following checklist outlines the completion status of each required item for
 
 Criteria | Completion Status
 --- | ---
-etch all pokemons names from the API and Create a pokemon card for each pokemon. | [x]
+Fetch all pokemons names from the API and Create a pokemon card for each pokemon. | [x]
 Display the pokemon's details in the modal. | [x]
 Pagination - All pokemons are accessible through the pagination buttons. | [x]
 Pagination - Display only at max 5 pages at a time. | [x]
