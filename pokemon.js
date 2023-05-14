@@ -176,7 +176,7 @@ async function showPage(currentPage) {
         <div class="pokeCard card" pokeName=${thisPokemon.name}>
         <h3>${formattedName}</h3>
         <img src="${thisPokemon.sprites.front_default}" alt="${thisPokemon.name}">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pokeModal">More</button>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#pokeModal">More</button>
         </div>`
         );
     };
@@ -197,18 +197,18 @@ function updatePaginationButtons(currentPage) {
     const endI = Math.min(numPages, currentPage + Math.floor(numPageBtn / 2));
 
     if (currentPage > 1) {
-        $('#pagination').append(`<button type="button" class="btn btn-primary pageBtn" pageNum=${1}>First</button>`);
-        $('#pagination').append(`<button type="button" class="btn btn-primary pageBtn" pageNum=${currentPage - 1}>Previous</button>`);
+        $('#pagination').append(`<button type="button" class="btn btn-outline-dark pageBtn" pageNum=${1}>First</button>`);
+        $('#pagination').append(`<button type="button" class="btn btn-outline-dark pageBtn" pageNum=${currentPage - 1}>Previous</button>`);
     }
 
     for (let i = startI; i <= endI; i++) {
         const active = i === currentPage ? 'active' : '';
-        $('#pagination').append(`<button type="button" class="btn btn-primary pageBtn ${active}" pageNum=${i}>${i}</button>`);
+        $('#pagination').append(`<button type="button" class="btn btn-outline-dark pageBtn ${active}" pageNum=${i}>${i}</button>`);
     }
 
     if (currentPage < numPages) {
-        $('#pagination').append(`<button type="button" class="btn btn-primary pageBtn" pageNum=${currentPage + 1}>Next</button>`);
-        $('#pagination').append(`<button type="button" class="btn btn-primary pageBtn" pageNum=${numPages}>Last</button>`);
+        $('#pagination').append(`<button type="button" class="btn btn-outline-dark pageBtn" pageNum=${currentPage + 1}>Next</button>`);
+        $('#pagination').append(`<button type="button" class="btn btn-outline-dark pageBtn" pageNum=${numPages}>Last</button>`);
     }
 
     const showingCount = Math.min(numPerPage, pokemon.length - (currentPage - 1) * numPerPage);
